@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Gastos Mensuales</title>    
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="container">
+            <div class="img-container">
+                <img src="./assets/img/titulo.png" />
+            </div>
+            <div class="form-group">
+                <input type="text" id="nombreGasto" placeholder="Nombre del gasto">
+                <select id="categoriaGasto">
+                    <option value="" disabled>Selecciona una categoría</option>
+                    <option value="alimentacion" selected>Alimentación</option>
+                    <option value="transporte">Transporte</option>
+                    <option value="vivienda">Vivienda</option>
+                    <option value="salud">Salud</option>
+                    <option value="entretenimiento">Entretenimiento</option>
+                    <option value="entretenimiento">Otra</option>
+                </select>
+                <input type="text" id="descripcionGasto" placeholder="Descripción del gasto">
+                <input type="number" id="valorGasto" placeholder="Valor del gasto" min="0" step="0.01">
+                <div>
+                    <button id="botonFormulario" onclick="clickBoton();">Agregar Gasto</button>
+                    <button id="botonLimpiar" onclick="limpiar();">Limpiar</button>
+                </div>
+            </div>
+            <ul id="listaDeGastos"></ul>
+            <div class="total">
+                Total Mensual: US$ <span id="totalGastos">0.00</span>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
